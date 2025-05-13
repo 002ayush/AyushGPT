@@ -10,6 +10,7 @@ import pickle
 with open("data.pkl", "rb") as f:
     data = pickle.load(f)
     facts = data["facts"]
+    print("facts", facts)
     fact_embeddings = data["embeddings"]
 
 # Load model (make sure same model used to generate embeddings)
