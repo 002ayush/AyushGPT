@@ -8,7 +8,7 @@ from flask_cors import CORS
 load_dotenv()
 app = Flask(__name__)
 
-CORS(app)
+CORS(app, resources={r"/*": {"origins": "*"}})
 # Define Gemini API endpoint and your API Key
 API_KEY = os.getenv("GEMINI_API_KEY") 
 GEMINI_API_URL = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key={API_KEY}"  # Replace with the Gemini API URL
